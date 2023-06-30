@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>WordPress</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">WordPress</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-card *ngFor="let noticia of noticias">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/ESPN_on_ABC.png" alt="Logo de Ionic">
+      <ion-card-header>
+        <ion-card-title>{{ noticia.title.rendered }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>{{ noticia.excerpt.rendered }}</ion-card-content>
+      <a [href]="noticia.link">Visitar</a>
+    </ion-card>
+  </ion-content>
+
+</ion-content>
